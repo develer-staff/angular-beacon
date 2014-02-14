@@ -1,0 +1,11 @@
+{
+    "name": "angular-beacon",
+    "main": "angular-beacon.js",
+    "version": "0.0.1",
+    "authors": [
+        "Lorenzo Villani <lorenzo@villani.me>"
+    ],
+    "description": "Angular.JS directive which executes a callback when the view is fully rendered.",
+    "license": "MIT",
+    "homepage": "http://github.com/lvillani/angular-beacon"
+}
