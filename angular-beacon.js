@@ -2,6 +2,7 @@
 angular.module('angular-beacon', []).directive('beacon', function() {
   return {
     restrict: 'E',
+    terminal: true,
     link: function(scope, element, attributes) {
       var cached, domCheck, elapsedTime, missing, name;
       console.assert(attributes.waitfor, 'The "beacon" directive expects the "waitfor" attribute.');

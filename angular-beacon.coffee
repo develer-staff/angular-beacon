@@ -1,6 +1,7 @@
 angular.module 'angular-beacon', []
     .directive 'beacon', ->
         restrict: 'E',
+        terminal: true,
         link: (scope, element, attributes) ->
             console.assert attributes.waitfor, 'The "beacon" directive expects the "waitfor" attribute.'
             console.assert attributes.onready, 'The "beacon" directive expects the "onready" attribute.'
