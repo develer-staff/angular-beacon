@@ -4,8 +4,8 @@ angular.module('angular-beacon', []).directive('beacon', function() {
     restrict: 'E',
     link: function(scope, element, attributes) {
       var cached, domCheck, elapsedTime, missing, name;
-      console.assert(attributes.waitfor, "The 'beacon' directive expects the 'waitfor' attribute.");
-      console.assert(attributes.onready, "The 'beacon' directive expects the 'onready' attribute.");
+      console.assert(attributes.waitfor, 'The "beacon" directive expects the "waitfor" attribute.');
+      console.assert(attributes.onready, 'The "beacon" directive expects the "onready" attribute.');
       missing = (function() {
         var _i, _len, _ref, _results;
         _ref = attributes.waitfor.split(',');
