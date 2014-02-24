@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "Angular.JS directive which executes a callback when the view is fully rendered.",
     "main": "angular-beacon.js",
-    "author": "Lorenzo Villani <lorenzo@villani.me>",
+    "author": "Lorenzo Villani <lvillani@develer.com>",
     "license": "MIT",
     "scripts": {
         "prepublish": "coffee -c -b angular-beacon.coffee"
