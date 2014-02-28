@@ -17,7 +17,7 @@ angular.module('angular-beacon', []).directive('beacon', function() {
         }
         return _results;
       })();
-      cached = [];
+      cached = {};
       elapsedTime = 0;
       domCheck = function() {
         var found, i, selector, _i, _len;
@@ -25,7 +25,7 @@ angular.module('angular-beacon', []).directive('beacon', function() {
           selector = missing[i];
           found = $(selector);
           if (found.length > 0) {
-            cached[i] = found;
+            cached[selector.replace(/[^A-Za-z0-9]/g, '_')] = found;
             missing.splice(i, 1);
           }
         }

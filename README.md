@@ -33,11 +33,12 @@ Add `angular-beacon` to the list of dependencies in your Angular.JS application:
     ]);
 ```
 
-Create a callback function in your controller's or directive's scope:
+Create a callback function in your controller's or directive's scope. As a bonus, all elements found
+are passed to your callback within an object (see below for details).
 
 ```javascript
     angular.module('myapp').controller('MyController', function ($scope) {
-        scope.myCallback = function () {
+        scope.myCallback = function(cache) {
             console.log('DOM Ready!');
         };
     });
@@ -61,4 +62,6 @@ That is: each `beacon` directive instances expects two attributes:
 
 * `onready` is the name of callback function defined inside the current Angular.JS scope which will
   be called when the DOM is ready.
-* `waitfor`: A comma-separated list of CSS selectors, the same you would use with jQuery.
+* `waitfor`: A comma-separated list of CSS selectors, the same you would use with jQuery. The
+  selector is normalized, replacing all non-alphanumeric characters with underscores and used as the
+  property name holding the cached value in the cache object passed to your callback.
