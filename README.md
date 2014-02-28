@@ -1,6 +1,8 @@
 angular-beacon
 ==============
 
+![Lighthouse](https://raw.github.com/develersrl/angular-beacon/master/lighthouse.png)
+
 In Angular there's no way to know when it has finished *rendering* items on the screen. Controllers
 emit `$viewContentLoaded` and directives call `postLink()` when Angular has finished *cloning* the
 template, but that doesn't mean that DOM nodes were created yet, not that the page has been fully
