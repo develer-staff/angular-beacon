@@ -5,7 +5,7 @@ angular-beacon
 
 In Angular there's no way to know when it has finished *rendering* items on the screen. Controllers
 emit `$viewContentLoaded` and directives call `postLink()` when Angular has finished *cloning* the
-template, but that doesn't mean that DOM nodes were created yet, not that the page has been fully
+template, but that doesn't mean that DOM nodes were created yet, nor that the page has been fully
 rendered.
 
 Wouldn't it be nice to be told when the page has been fully rendered? Unfortunately, Angular doesn't
