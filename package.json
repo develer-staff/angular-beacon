@@ -1,6 +1,6 @@
 {
     "name": "angular-beacon",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Angular.JS directive which executes a callback when the view is fully rendered.",
     "main": "angular-beacon.js",
     "author": "Lorenzo Villani <lvillani@develer.com>",
