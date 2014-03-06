@@ -22,7 +22,7 @@ angular.module 'angular-beacon', []
                         missing.splice i, 1
 
                 if elapsedTime >= 5000
-                    console.warn 'Timeout reached. Bailing out.'
+                    console.warn "Timeout reached. Bailing out (still missing: #{missing})."
                 else if missing.length > 0
                     elapsedTime += 25
 

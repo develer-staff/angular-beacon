@@ -30,7 +30,7 @@ angular.module('angular-beacon', []).directive('beacon', function() {
           }
         }
         if (elapsedTime >= 5000) {
-          return console.warn('Timeout reached. Bailing out.');
+          return console.warn("Timeout reached. Bailing out (still missing: " + missing + ").");
         } else if (missing.length > 0) {
           elapsedTime += 25;
           return setTimeout(domCheck, 25);
