@@ -28,33 +28,33 @@ your scope) in which you can do all the DOM manipulation you want.
 Add `angular-beacon` to the list of dependencies in your Angular.JS application:
 
 ```javascript
-    angular.module('myapp', [
-        'ngRoute',
-        // ...
-        'angular-beacon'
-    ]);
+angular.module('myapp', [
+    'ngRoute',
+    // ...
+    'angular-beacon'
+]);
 ```
 
 Create a callback function in your controller's or directive's scope. As a bonus, all elements found
 are passed to your callback within an object (see below for details).
 
 ```javascript
-    angular.module('myapp').controller('MyController', function ($scope) {
-        scope.myCallback = function(cache) {
-            console.log('DOM Ready!');
-        };
-    });
+angular.module('myapp').controller('MyController', function ($scope) {
+    scope.myCallback = function(cache) {
+        console.log('DOM Ready!');
+    };
+});
 ```
 
 In your view or template, add a reference to the `beacon` directive, towards the
 end of it:
 
 ```html
-    <div class="my-panel">
-        ...
-    </div>
-    <button>Push button</button>
-    <beacon waitfor=".my-panel, button" onready="myCallback"></beacon>
+<div class="my-panel">
+    <!-- [...] -->
+</div>
+<button>Push button</button>
+<beacon waitfor=".my-panel, button" onready="myCallback"></beacon>
 ```
 
 `myCallback` will be called as soon as `.my-panel` and `button` appear on the page (as DOM nodes at
