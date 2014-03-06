@@ -23,6 +23,15 @@ Angular-Beacon repeatedly checks the DOM until all the elements you need become 
 try for up to five seconds), then it invokes a callback function (which must have been defined in
 your scope) in which you can do all the DOM manipulation you want.
 
+
+# Installation
+
+This library is provided as a Bower component and NPM module:
+
+- Bower: `bower install angular-beacon`
+- NPM: `npm install angular-beacon`
+
+
 # How to use
 
 Add `angular-beacon` to the list of dependencies in your Angular.JS application:
