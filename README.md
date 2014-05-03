@@ -75,4 +75,5 @@ That is: each `beacon` directive instances expects two attributes:
   be called when the DOM is ready.
 * `waitfor`: A comma-separated list of CSS selectors, the same you would use with jQuery. The
   selector is normalized, replacing all non-alphanumeric characters with underscores and used as the
-  property name holding the cached value in the cache object passed to your callback.
+  property name of the `cache` object passed to your callback. Said object contains the DOM elements
+  you were looking for, so that you don't have to perform another costly DOM lookup in your callback.
